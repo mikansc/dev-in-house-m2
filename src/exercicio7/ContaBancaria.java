@@ -4,9 +4,9 @@ public class ContaBancaria {
     String nomeDoTitular;
     int numero;
     int agencia;
-    private double saldo;
     double limite;
     String abertaEm;
+    private double saldo;
 
     public ContaBancaria(String nomeDoTitular, int numero, int agencia, String abertaEm) {
         this.nomeDoTitular = nomeDoTitular;
@@ -33,6 +33,11 @@ public class ContaBancaria {
 
     double verificaSaldo() {
         return this.saldo;
+    }
+
+    // Exercício 8
+    String recuperaDadosParaImpressao() {
+        return "Dados da conta - Titular: " + this.nomeDoTitular + " Ag.: " + this.agencia + " C/C.: " + this.numero + " Aberta em: " + this.abertaEm + ".";
     }
 
 }
