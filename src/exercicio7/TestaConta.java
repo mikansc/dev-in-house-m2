@@ -25,7 +25,9 @@ public class TestaConta {
 
         // Remove fundos
         conta.sacar(150);
-        System.out.printf("%nSaldo atual após sacar R$150: %f", conta.verificaSaldo());
+        System.out.printf("%nSaldo atual após sacar R$150: %f%n", conta.verificaSaldo());
 
+        // Ex.8 - Testa método recuperaDadosParaImpressao();
+        System.out.println(conta.recuperaDadosParaImpressao());
     }
 }
