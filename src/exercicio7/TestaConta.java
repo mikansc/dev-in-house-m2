@@ -29,5 +29,18 @@ public class TestaConta {
 
         // Ex.8 - Testa método recuperaDadosParaImpressao();
         System.out.println(conta.recuperaDadosParaImpressao());
+
+        // Ex.15 - Testa se a classe está incrementando o valor de ContaBancaria.identificador
+        System.out.println("Identificador conta: " + conta.getIdentificador());
+
+        ContaBancaria conta2 = new ContaBancaria("Fulano Silva", 0002, 0001, "20/03/2021");
+        System.out.println("Identificador conta2: " + conta2.getIdentificador());
+
+        ContaBancaria conta3 = new ContaBancaria("Cicrano Souza", 0003, 0001, "20/03/2021");
+        System.out.println("Identificador conta3: " + conta3.getIdentificador());
+
+        ContaBancaria conta4 = new ContaBancaria("Beltrano Santos", 0004, 0001, "20/03/2021");
+        System.out.println("Identificador conta4: " + conta4.getIdentificador());
+
     }
 }
