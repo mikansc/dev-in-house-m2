@@ -1,6 +1,10 @@
 package exercicio7;
 
 public class ContaBancaria {
+
+    private static int totalDeContas;
+    private int identificador;
+
     String nomeDoTitular;
     int numero;
     int agencia;
@@ -8,7 +12,13 @@ public class ContaBancaria {
     String abertaEm;
     private double saldo;
 
+    public ContaBancaria() {
+        ContaBancaria.totalDeContas++;
+    }
+
     public ContaBancaria(String nomeDoTitular, int numero, int agencia, String abertaEm) {
+        this();
+        this.identificador = totalDeContas;
         this.nomeDoTitular = nomeDoTitular;
         this.numero = numero;
         this.agencia = agencia;
@@ -40,4 +50,8 @@ public class ContaBancaria {
         return "Dados da conta - Titular: " + this.nomeDoTitular + " Ag.: " + this.agencia + " C/C.: " + this.numero + " Aberta em: " + this.abertaEm + ".";
     }
 
+    // Exercício 15
+    public int getIdentificador() {
+        return identificador;
+    }
 }
