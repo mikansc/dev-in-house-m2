@@ -2,13 +2,30 @@ package semana2.exercicio8;
 
 public class Gerente extends Funcionario {
 
-    public String senha;
-    public int numSubordinados;
+    private String senha;
+    private int numSubordinados;
 
-    public Gerente(String nome, String sobrenome, String cpf, double salario, String senha, int numSubordinados) {
+    public Gerente(String nome, String sobrenome, String cpf, double salario, String senha) {
         super(nome, sobrenome, cpf, salario);
         this.senha = senha;
-        this.numSubordinados = numSubordinados;
+        this.numSubordinados = 0;
     }
 
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public int getNumSubordinados() {
+        return numSubordinados;
+    }
+
+    public void setNumSubordinados(int numSubordinados) {
+        if(numSubordinados >= 0) {
+            this.numSubordinados = numSubordinados;
+        }
+    }
 }
