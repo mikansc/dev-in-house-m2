@@ -10,4 +10,8 @@ public class ContaCorrente extends Conta{
     boolean sacar(double valor) {
         return super.sacar(valor - 0.10);
     }
+
+    public String getTipo () {
+        return super.getTipo() + " Corrente";
+    }
 }

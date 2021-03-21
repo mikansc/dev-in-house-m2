@@ -54,4 +54,11 @@ public class Conta {
     public int getIdentificador() {
         return identificador;
     }
+
+
+    // ex 14 semana 2
+    public String getTipo () {
+        return "Conta";
+    }
+
 }
