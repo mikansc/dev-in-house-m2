@@ -9,4 +9,8 @@ public class ContaPoupanca extends Conta{
     public void renderJurosDePoupanca() {
         this.saldo *= 1.001;
     }
+
+    public String getTipo () {
+        return super.getTipo() + " Poupança";
+    }
 }
