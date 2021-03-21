@@ -10,7 +10,7 @@ public class Conta {
     int agencia;
     double limite;
     String abertaEm;
-    private double saldo;
+    protected double saldo;
 
     public Conta() {
         Conta.totalDeContas++;
