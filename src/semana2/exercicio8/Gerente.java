@@ -28,4 +28,9 @@ public class Gerente extends Funcionario {
             this.numSubordinados = numSubordinados;
         }
     }
+
+    public double calculaBonificacao () {
+        return this.salario * (15.00 / 100);
+    }
+
 }

@@ -1,10 +1,11 @@
 package semana2.exercicio8;
 
 public class Funcionario {
+
     private String nome;
     private String sobrenome;
     private String cpf;
-    private double salario;
+    protected double salario;
 
     public Funcionario(String nome, String sobrenome, String cpf, double salario) {
         this.nome = nome;
@@ -49,5 +50,9 @@ public class Funcionario {
         if(salario > 0) {
             this.salario = salario;
         }
+    }
+
+    public double calculaBonificacao () {
+        return this.salario * (10.00 / 100);
     }
 }
