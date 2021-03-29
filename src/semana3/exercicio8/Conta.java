@@ -47,7 +47,8 @@ public abstract class Conta {
 
     // Exercício 8
     String recuperaDadosParaImpressao() {
-        return "Dados da conta - Titular: " + this.nomeDoTitular + " Ag.: " + this.agencia + " C/C.: " + this.numero + " Aberta em: " + this.abertaEm + ".";
+
+        return "Dados da "+ this.getTipo() + " - Titular: " + this.nomeDoTitular + " Ag.: " + this.agencia + " C/C.: " + this.numero + " Aberta em: " + this.abertaEm + ".";
     }
 
     // Exercício 15
