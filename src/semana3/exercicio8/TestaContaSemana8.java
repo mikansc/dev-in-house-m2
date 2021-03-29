@@ -16,6 +16,8 @@ public class TestaContaSemana8 {
         System.out.println(conta1.getTipo());
         System.out.println(conta2.getTipo());
 
+        System.out.println(conta1.recuperaDadosParaImpressao());
+
     }
 
 }
