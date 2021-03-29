@@ -1,0 +1,9 @@
+package semana3.exercicio9;
+
+public class Triangulo extends FormaBidimensional {
+
+    public Triangulo(String cor, String material, int base, int altura) {
+        super(cor, material, base, altura);
+    }
+}
+
