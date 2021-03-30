@@ -3,14 +3,13 @@ package semana3.exercicio8;
 public abstract class Conta {
 
     private static int totalDeContas;
-    private int identificador;
-
+    protected double saldo;
     String nomeDoTitular;
     int numero;
     int agencia;
     double limite;
     String abertaEm;
-    protected double saldo;
+    private int identificador;
 
     public Conta() {
         Conta.totalDeContas++;
@@ -33,7 +32,7 @@ public abstract class Conta {
         return false;
     }
 
-    boolean depositar(int valor) {
+    boolean depositar(double valor) {
         if (valor > 0) {
             this.saldo += valor;
             return true;
@@ -47,8 +46,10 @@ public abstract class Conta {
 
     // Exercício 8
     String recuperaDadosParaImpressao() {
-
-        return "Dados da "+ this.getTipo() + " - Titular: " + this.nomeDoTitular + " Ag.: " + this.agencia + " C/C.: " + this.numero + " Aberta em: " + this.abertaEm + ".";
+        return String.format("Dados da %s: Titular - %s | Ag.: %d | Conta: %d | Saldo: R$ %.2f | Aberta em %s.",
+                this.getTipo(), this.nomeDoTitular,
+                this.agencia, this.numero,
+                this.saldo, this.abertaEm);
     }
 
     // Exercício 15
@@ -58,6 +59,6 @@ public abstract class Conta {
 
 
     // ex 14 semana 2
-    public abstract String getTipo ();
+    public abstract String getTipo();
 
 }
