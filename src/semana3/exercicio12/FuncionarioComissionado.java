@@ -1,13 +1,15 @@
 package semana3.exercicio12;
 
+import java.time.LocalDate;
+
 public class FuncionarioComissionado extends Funcionario {
     private double vendasBrutas;
     private double taxaComissao;
 
-    public FuncionarioComissionado(String nome, String sobrenome, double vendasBrutas, double taxaComissao) {
-        super(nome, sobrenome);
-        this.vendasBrutas = validaVendasBrutas(vendasBrutas);
-        this.taxaComissao = validarTaxaComissao(taxaComissao);
+    public FuncionarioComissionado(String nome, String sobrenome, String dataNascimento, double vendasBrutas, double taxaComissao) {
+        super(nome, sobrenome, dataNascimento);
+        this.vendasBrutas = vendasBrutas;
+        this.taxaComissao = taxaComissao;
     }
 
     public double validaVendasBrutas(double valor) {
