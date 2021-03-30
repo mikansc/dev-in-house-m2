@@ -1,6 +1,6 @@
 package semana3.exercicio8;
 
-public class TestaContaSemana8 {
+public class TestaContaSemana3 {
 
     public static void main(String[] args) {
         ContaPoupanca conta1 = new ContaPoupanca("Michael",
