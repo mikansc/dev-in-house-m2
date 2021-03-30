@@ -8,21 +8,23 @@ public class FolhaPagamento {
         FuncionarioAssalariado assalariado = new FuncionarioAssalariado("Michael", "Nascimento", "29/01/1991", 2500.00);
         FuncionarioHorista horista = new FuncionarioHorista("Fulano", "Silva", "13/07/2000", 150, 30);
         FuncionarioComissionado comissionado = new FuncionarioComissionado("Beltrano", "Souza", "30/03/1998", 200000, 0.05);
+        FuncionarioPorPeca producao = new FuncionarioPorPeca("José", "Pereira", "29/01/1972",200,5.50);
 
         System.out.printf("Assalariado: %s | Salário: R$ %.2f.%n", assalariado, assalariado.calcularSalarioMensal());
         System.out.printf("Horista: %s | Salário: R$ %.2f.%n", horista, horista.calcularSalarioMensal());
         System.out.printf("Comissionado: %s | Salário: R$ %.2f.%n ", comissionado, comissionado.calcularSalarioMensal());
+        System.out.printf("Por produção: %s | Salário: R$ %.2f.%n ", producao, producao.calcularSalarioMensal());
 
-        Funcionario[] funcionarios = new Funcionario[3];
+        Funcionario[] funcionarios = new Funcionario[4];
 
         funcionarios[0] = assalariado;
         funcionarios[1] = horista;
         funcionarios[2] = comissionado;
+        funcionarios[3] = producao;
 
         double folhaTotal = 0;
         for (Funcionario funcionario : funcionarios) {
             if (isAniversario(funcionario)) {
-                System.out.println("Funcionario" + funcionario);
                 folhaTotal += funcionario.calcularSalarioMensal() + 100.00;
             } else {
                 folhaTotal += funcionario.calcularSalarioMensal();
