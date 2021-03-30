@@ -1,13 +1,15 @@
 package semana3.exercicio12;
 
+import java.time.LocalDate;
+
 public class FuncionarioHorista extends Funcionario {
     private double horasTrabalhadas;
     private double salarioHora;
 
-    public FuncionarioHorista(String nome, String sobrenome, double horasTrabalhadas, double salarioHora) {
-        super(nome, sobrenome);
-        this.horasTrabalhadas = validaHoras(horasTrabalhadas);
-        this.salarioHora = validaSalario(salarioHora);
+    public FuncionarioHorista(String nome, String sobrenome, String dataNascimento, double horasTrabalhadas, double salarioHora) {
+        super(nome, sobrenome, dataNascimento);
+        this.horasTrabalhadas = horasTrabalhadas;
+        this.salarioHora = salarioHora;
     }
 
     public double getSalarioHora() {
