@@ -24,7 +24,7 @@ public abstract class Funcionario {
 
     @Override
     public String toString() {
-        return String.format("Nome: %s | Sobrenome: %", this.nome, this.sobrenome);
+        return String.format("Nome: %s | Sobrenome: %s", this.nome, this.sobrenome);
     }
 
     public abstract double calcularSalarioMensal();
