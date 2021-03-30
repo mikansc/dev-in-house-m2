@@ -61,4 +61,8 @@ public abstract class Conta {
     // ex 14 semana 2
     public abstract String getTipo();
 
+    @Override
+    public String toString() {
+        return this.recuperaDadosParaImpressao();
+    }
 }
