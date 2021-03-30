@@ -22,6 +22,7 @@ public class TestaContaSemana4 {
         agencia1.adiciona(conta5);
 
         System.out.println(agencia1.getQuantidadeDeContas());
+        System.out.println(agencia1.buscaPorTitular("Aline"));
 
 
 
