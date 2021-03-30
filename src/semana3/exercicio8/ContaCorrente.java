@@ -1,6 +1,8 @@
 package semana3.exercicio8;
 
-public class ContaCorrente extends Conta {
+import semana3.exercicio8.interfaces.Tributavel;
+
+public class ContaCorrente extends Conta implements Tributavel {
 
     public ContaCorrente(String nomeDoTitular, int numero, int agencia, String abertaEm) {
         super(nomeDoTitular, numero, agencia, abertaEm);
@@ -13,5 +15,10 @@ public class ContaCorrente extends Conta {
 
     public String getTipo () {
         return "Conta Corrente";
+    }
+
+    @Override
+    public double getValorImposto() {
+        return super.saldo * 0.01;
     }
 }
