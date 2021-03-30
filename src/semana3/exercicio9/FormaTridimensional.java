@@ -1,5 +1,7 @@
 package semana3.exercicio9;
 
+import java.util.Objects;
+
 public abstract class FormaTridimensional extends Forma {
     protected int altura;
     protected int largura;
@@ -13,4 +15,13 @@ public abstract class FormaTridimensional extends Forma {
     }
 
     public abstract int getVolume();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FormaTridimensional that = (FormaTridimensional) o;
+        return altura == that.altura && largura == that.largura && comprimento == that.comprimento;
+    }
+
 }
